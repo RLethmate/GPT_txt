@@ -19,7 +19,7 @@ openai.api_key = st.secrets["API_KEYS"]["openai"]
 
 #gptflix_logo = Image.open('./chat/logo.png')
 
-bens_bites_logo = Image.open('./chat/Bens_Bites_Logo.jpg')
+#bens_bites_logo = Image.open('./chat/Bens_Bites_Logo.jpg')
 
 # random user picture
 user_av = random.randint(0, 100)
@@ -35,14 +35,16 @@ def randomize_array(arr):
         arr.remove(elem)
     return sampled_arr
 
-st.set_page_config(page_title="GPTflix", page_icon="🍿", layout="wide")
+st.set_page_config(page_title="GPT_txt", page_icon="🍿", layout="wide")
 
-st.header("GPTflix is like chatGPT for movie reviews!🍿\n")
+st.header("GPT_txt is like GPT with it-agile knowledge.\n")
 
 
-st.header("Thanks for visiting GPTflix! It's been a fun experiment, with over 4000 unique users over four weeks and an average of 10 questions per user while the site was online! Perhaps we will be back some time...🍿\n")
+st.header("Thanks for visiting GPT_txt!\n")
 
 # Define the name of the index and the dimensionality of the embeddings
+
+# chose different index!!!
 index_name = "400kmovies"
 dimension = 1536
 
@@ -69,13 +71,13 @@ COMPLETIONS_API_PARAMS = {
 }
 
 
-feedback_url = "https://forms.gle/YMTtGK1zXdCRzRaj6"
-bb_url ="https://www.bensbites.co/?utm_source=gptflix"
-tech_url = "https://news.ycombinator.com/item?id=34802625"
-github_url = "https://github.com/stephansturges/GPTflix"
+#feedback_url = "https://forms.gle/YMTtGK1zXdCRzRaj6"
+#bb_url ="https://www.bensbites.co/?utm_source=gptflix"
+#tech_url = "https://news.ycombinator.com/item?id=34802625"
+#github_url = "https://github.com/stephansturges/GPTflix"
 
 with st.sidebar:
-    st.markdown("# About 🙌")
+    st.markdown("# About")
     st.markdown(
         "GPT_txt lets you talk to chatGPT knowing your own text files \n"
         )
@@ -165,8 +167,8 @@ def construct_prompt_pinecone(question):
     
     header = """Answer the question as truthfully as possible using the provided context, 
     and if the answer is not contained within the text below, say "I don't know."
-    Answer in a very sarcastic tone and make it fun! Surprise the user with your answers. You can give long answers tangentially related to the movie.\n
-    You are GPTflix, a AI movie-buff that loves talking about movies!\n
+    Answer in a professional tone but make it fun! Surprise the user with your answers.\n
+    You are GPT_txt, an agile evangelist that loves talking about agile practices!\n
     Context:\n
     """ 
     return header + "".join(chosen_sections) 
