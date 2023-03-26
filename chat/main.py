@@ -77,22 +77,16 @@ github_url = "https://github.com/stephansturges/GPTflix"
 with st.sidebar:
     st.markdown("# About 🙌")
     st.markdown(
-        "GPTflix allows you to talk to version of chatGPT \n"
-        "that has access to reviews of about 10 000 movies! 🎬 \n"
-        "Holy smokes, chatGPT and 10x cheaper??! We are BACK! 😝\n"
+        "GPT_txt lets you talk to chatGPT knowing your own text files \n"
         )
     st.markdown(
-        "Unline chatGPT, GPTflix can't make stuff up\n"
-        "and will only answer from injected knowlege 👩‍🏫 \n"
+        "This version of chatGPT will not make stuff up\n"
+        "but will only answer from text you injected 👩‍🏫 \n"
     )
     st.markdown("---")
-    st.markdown("A side project by Stephan Sturges")
-    st.markdown("Kept online by [Ben's Bites](%s)!" %bb_url)
-    st.image(bens_bites_logo, width=60)
+    st.markdown("credits to Stephan Sturges")
 
     st.markdown("---")
-    st.markdown("Tech [info](%s) for you nerds out there!" %tech_url)
-    st.markdown("Give feedback [here](%s)" %feedback_url)
     st.markdown("---")
     st.markdown("Code open-sourced [here](%s)" %github_url)
     st.markdown("---")
